@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [LoginController::class, 'index'])->name('login');
+Route::get('/cek', [LoginController::class, 'cekuser'])->name('cekuser');
+
+
+// DASHBOARD
+Route::get('/tes', [DashboardController::class, 'index'])->name('dashboard');
+
+//USER
+Route::get('/user', [UserController::class, 'index'])->name('user');
