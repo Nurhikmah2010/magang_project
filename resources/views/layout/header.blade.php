@@ -8,14 +8,15 @@ data-sidebar-position="fixed" data-header-position="fixed">
 <aside class="left-sidebar">
   <!-- Sidebar scroll-->
   <div>
-    <div class="brand-logo d-flex align-items-center justify-content-between">
-      <a href="./index.html" class="text-nowrap logo-img">
-        <img src="{{ asset('dashboard/assets/images/logos/dark-logo.svg') }}" width="180" alt="" />
+    <div class="brand-logo d-flex align-items-center">
+      <a href="#" class="text-nowrap logo-img ms-3 p-0 m-0">
+          <img src="{{ asset('login/assets/brand/McDermott-logo.png') }}" width="50" alt="" />
       </a>
+      <span class="fw-bold fs-6 p-0 m-0" style="color: black;">McDermott</span>
       <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
-        <i class="ti ti-x fs-8"></i>
+          <i class="ti ti-x fs-8"></i>
       </div>
-    </div>
+  </div>
     <!-- Sidebar navigation-->
     <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
       <ul id="sidebarnav">
@@ -39,7 +40,23 @@ data-sidebar-position="fixed" data-header-position="fixed">
             <span class="hide-menu">User</span>
           </a>
         </li>
-        <li class="nav-small-cap">
+        <li class="sidebar-item">
+          <a class="sidebar-link" href="#" aria-expanded="false">
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" /><path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /></svg>
+            </span>
+            <span class="hide-menu">Menu 1</span>
+          </a>
+        </li>
+        <li class="sidebar-item">
+          <a class="sidebar-link" href="#" aria-expanded="false">
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" /><path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /></svg>
+            </span>
+            <span class="hide-menu">Menu 2</span>
+          </a>
+        </li>
+        {{-- <li class="nav-small-cap">
           <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
           <span class="hide-menu">UI COMPONENTS</span>
         </li>
@@ -123,7 +140,7 @@ data-sidebar-position="fixed" data-header-position="fixed">
             <span class="hide-menu">Sample Page</span>
           </a>
         </li>
-      </ul>
+      </ul> --}}
       {{-- <div class="unlimited-access hide-menu bg-light-primary position-relative mb-7 mt-5 rounded">
         <div class="d-flex">
           <div class="unlimited-access-title me-3">
@@ -180,7 +197,7 @@ data-sidebar-position="fixed" data-header-position="fixed">
                   <i class="ti ti-list-check fs-6"></i>
                   <p class="mb-0 fs-3">My Task</p>
                 </a>
-                <a href="./authentication-login.html" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
+                <a href="{{route('logout')}}" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
               </div>
             </div>
           </li>

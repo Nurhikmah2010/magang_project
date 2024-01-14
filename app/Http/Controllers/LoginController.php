@@ -34,4 +34,9 @@ class LoginController extends Controller
             return response()->json(['message' => 'Email atau password salah.'], 401);
         }
     }
+
+    public function logout ()
+    {
+         return redirect('/')->with('succes', 'Berhasil Logout');
+    }
 }

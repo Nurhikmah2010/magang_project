@@ -18,6 +18,7 @@ use App\Http\Controllers\LoginController;
 
 Route::get('/', [LoginController::class, 'index'])->name('login');
 Route::get('/cek', [LoginController::class, 'cekuser'])->name('cekuser');
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 
 // DASHBOARD
